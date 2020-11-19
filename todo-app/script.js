@@ -2,12 +2,13 @@ Vue.createApp({
   data() {
     return {
       tasks: [],
-      enteredValue: '',
+      enteredValue: "",
     };
   },
   methods: {
     addTask() {
       this.tasks.push(this.enteredValue);
-    }
-  }
-}).mount('#app');
+      this.enteredValue = "";
+    },
+  },
+}).mount("#app");
